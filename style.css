@@ -1,0 +1,44 @@
+::selection {
+  color: black;
+  background: white;
+}
+
+html { 
+  background: url(soece3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: inset 100px 100px 100px rgba(0, 0, 0, 1);
+}
+
+.centeritm{
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centerstage{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  /*font-family: sans-serif;*/
+  /*text-align: center;*/
+  /*line-height: 1;*/
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  /*max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;*/
+  height: 200px; width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
