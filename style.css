@@ -29,20 +29,52 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
     background-color: var(--white-color);
 }
 
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+  
+/* Customizes the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #2e2e2e; 
+}
+  
+/* Customizes the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 25px; 
+}
+  
+/* Customizes the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin; 
+    scrollbar-color: #555 #2e2e2e; 
+}
 
 /* NAVBAR */
 .header {
-    width: 1240px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 1440px;
+    height: 100px;
+    margin: 0 100px 0 100px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
 }
 
 .navbar-container {
-    width: 100%;
+    width: 1240px;   
+    height: 100px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -50,4 +82,392 @@ body {
     background-color: var(--white-color);
     z-index: 1000;
 }
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo img {
+    width: 38px;
+    height: 38px;
+}
+
+.nav-logo a {
+    font-family: 'HelveticaNeueBD';
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--black-color);
+    text-shadow:
+    /* Adds a grey shadow offset 1.5px in both directions */
+    1.5px 1.5px 0px rgba(175, 175, 175, 1);
+}
+
+.nav-sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-sections a {
+    font-family: 'HelveticaNeueMD';
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--black-color);
+    margin: 0;
+}
+
+/* HERO */
+.carousel-section {
+    width: 1240px;
+    margin: 0 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.frame {
+    display: flex;
+    aspect-ratio: 16/9;
+    width: auto;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slides-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 800ms ease;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow-left-1 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    left: 0;
+    margin-left: -35px;
+}
+
+.arrow-right-1 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    right: 0;
+    margin-right: -35px;
+}
+
+/* NAV DOTS */
+.nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.nav-dots .dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: var(--darkgrey-color);
+    cursor: pointer;
+}
+
+/* ABOUT US */
+.about-section {
+    width: 1240px;
+    margin: 10px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+}
+
+.about-text {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.about-text h1 {
+    font-family: 'HelveticaNeueMD';
+    font-size: 36px;
+    color: var(--black-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-text p {
+    font-family: 'HelveticaNeue';
+    font-size: 22px;
+    text-align: justify;
+    color: var(--black-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-image {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.what-we-do-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+}
+
+.what-we-do-image {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.what-we-do-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.what-we-do-text {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.what-we-do-text h1 {
+    font-family: 'HelveticaNeueMD';
+    font-size: 36px;
+    color: var(--black-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.what-we-do-text p {
+    font-family: 'HelveticaNeue';
+    font-size: 22px;
+    text-align: justify;
+    color: var(--black-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* EVENTS SECTION */
+.events-section {
+    width: 1240px;
+    margin: 50px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.events-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.events-img-container img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-stats-container {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.events-stats-container .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-stats-container h1 {
+    font-family: HelveticaNeueBD;
+    font-size: 56px;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 14px;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow:
+    /* Adds a grey shadow offset 1px in both directions */
+    2px 2px 0px rgba(175, 175, 175, 1);
+}
+
+.events-stats-container p {
+    font-family: HelveticaNeueMD;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 5px;
+    height: 172px;
+    border-radius: 7px;
+    flex-shrink: 0;
+    background-color: var(--darkgrey-color);
+}
+
+/* REELS CAROUSEL */
+.reels-carousel-header h1 {
+    font-family: HelveticaNeueMD;
+    font-size: 48px;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+    text-shadow:
+    /* Adds a grey shadow offset 1px in both directions */
+    2px 2px 0px rgba(175, 175, 175, 1);
+
+}
+.reels-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* margin-left: 100px;
+    margin-top: 50px;
+    margin-right: 100px; */
+}
+
+.reels-frame {
+    display: flex;
+    /* width: 86.111vw;
+    height: 42.639vw; */
+    overflow: hidden;
+}
+
+.reels-container {
+    display: flex;
+    transition: all 350ms ease;
+    gap: 1.736vw;
+}
+.reel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 42.639vw;
+    width: 27.361vw;
+    border: var(--darkgrey-color) 0.069vw solid;
+    border-radius: 1.389vw;
+    background-color: var(--lightgrey-color);
+    gap: 0.903vw;
+    object-fit: contain;
+}
+
+.reel img {
+    height: 30.556vw;
+    width: 22.986vw;
+}
+
+.reel .watch-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 4.167vw;
+    width: 25vw;
+    border: var(--darkgrey-color) 0.069vw solid;
+    border-radius: 1.389vw;
+    background-color: var(--lightgrey-color);
+}
+
+.reel h1 {
+    font-family: HelveticaNeueMD;
+    font-size: 1.667vw;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+}
+.watch-button a {
+    text-decoration: none;
+    font-family: HelveticaNeueMD;
+    font-size: 1.667vw;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+}
+
+.arrow-left-2 {
+    position: absolute;
+    width: 4.861vw;
+    height:4.861vw;
+    cursor: pointer;
+    left: 0;
+    margin-left: -2.431vw;
+}
+
+.arrow-right-2 {
+    position: absolute;
+    width: 4.861vw;
+    height: 4.861vw;
+    cursor: pointer;
+    right: 0;
+    margin-right: -2.431vw;
+}
+
+
 
